@@ -4,7 +4,7 @@ export default class Validator {
   }
 
   validateUsername() {
-    return /^[^\d\-_][-\w]*[^\d\-_]$/gmi.test(this.string) && !/\d{4,}/gm.test(this.string);
+    return /^[a-zA-Z][-\w]*[a-zA-Z]$/gmi.test(this.string) && !/\d{4,}/gm.test(this.string);
   }
 
   clearPhoneNumber() {

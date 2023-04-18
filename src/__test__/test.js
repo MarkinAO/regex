@@ -16,6 +16,8 @@ test('Test validateUsername', () => {
   expect(validator.validateUsername()).toBe(false);
   validator.string = 'Predator12345_X';
   expect(validator.validateUsername()).toBe(false);
+  validator.string = 'Predator45_Вася_X';
+  expect(validator.validateUsername()).toBe(false);
   validator.string = 'Predator123_X';
   expect(validator.validateUsername()).toBe(true);
   validator.string = 'Alien-vs-predator_777_Valera';
